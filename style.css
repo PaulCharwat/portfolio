@@ -1,0 +1,22 @@
+h1 {
+    font-size: 6em;
+}
+
+.schwerpunkt .img-fluid {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.schwerpunkt .card-body {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.schwerpunkt small {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-110%, -100%);
+}
