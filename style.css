@@ -20,3 +20,7 @@ h1 {
     left: 100%;
     transform: translate(-110%, -100%);
 }
+
+.card-img-top{
+    max-height: 200px;
+}
