@@ -33,11 +33,11 @@
 
         <ul class="nav nav-tabs container border-bottom-0">
             <li class="nav-item">
-                <button class="nav-link border-bottom-0" data-bs-toggle="collapse" data-bs-target="#s3">Semester
+                <button class="nav-link border-bottom-0" data-bs-toggle="collapse" data-bs-target="#s3, #s4">Semester
                     3</b>
             </li>
             <li class="nav-item">
-                <button class="nav-link border-bottom-0" data-bs-toggle="collapse" data-bs-target="#s4">Semester
+                <button class="nav-link border-bottom-0" data-bs-toggle="collapse" data-bs-target="#s4, #s3, #no">Semester
                     4</b>
             </li>
         </ul>
@@ -1368,26 +1368,28 @@
             element.classList.add(...activeClasses)
         }
 
-        let semester;
-        {
-            let aktuellesDatum = new Date();
-            let wechsel = new Date();
-            wechsel.setFullYear(2024);
-            wechsel.setMonth(1, 10)
-            semester = (aktuellesDatum - wechsel >= 0) ? 4 : 3;
+        function setInActive(element) {
+            element.classList.remove(...activeClasses)
         }
+
+        let semester = 4;
 
         document.querySelector('#s' + semester).classList.add('show');
 
         document.querySelectorAll('.nav-link').forEach(link => {
 
-            if (link.attributes.getNamedItem('data-bs-target').nodeValue.includes(semester)) setActive(link);
+            if (link.attributes.getNamedItem('data-bs-target').nodeValue.includes('no')) {
+                setActive(link);
+            }
 
             link.addEventListener('click', () => {
                 let old_link = document.querySelector('.nav-link.active');
-                if (old_link)
-                    old_link.classList.remove(...activeClasses);
-                if (link.innerHTML != old_link?.innerHTML) setActive(link);
+                if (old_link) {
+                    setInActive(old_link);
+                }
+                if (link.innerHTML != old_link?.innerHTML) {
+                    setActive(link);
+                }
             })
         })
     </script>
