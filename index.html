@@ -20,10 +20,11 @@
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="fw-light">Portfolio</h1>
-                    <p class="lead text-body-secondary">Diese Website enthält mein Portfolio zu der Vorlesung
-                        Web-Entwicklung.</p>
+                    <p class="lead text-body-secondary">Der Inhalt dieser Website stellt mein Portfolio zum Modul
+                        "Entwicklung verteilter Systeme" vom Wintersemester 2023/24 bis zum Sommersemester 2024 an der
+                        DHBW Mannheim dar.</p>
                     <p>
-                        <a href="#vorlesungen" class="btn btn-primary my-2">Zu den einzelnen Vorlesungen</a><br>
+                        <a href="#4-1" class="btn btn-primary my-2">Zu den einzelnen Vorlesungen</a><br>
                         <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                             data-bs-target="#schwerpunkt-4">Schwerpunkt</button>
                     </p>
@@ -37,7 +38,8 @@
                     3</b>
             </li>
             <li class="nav-item">
-                <button class="nav-link border-bottom-0" data-bs-toggle="collapse" data-bs-target="#s4, #s3, #no">Semester
+                <button class="nav-link border-bottom-0" data-bs-toggle="collapse"
+                    data-bs-target="#s4, #s3, #no">Semester
                     4</b>
             </li>
         </ul>
@@ -1052,8 +1054,8 @@
                                         <h3 class="card-title">Schwerpunkt</h3>
                                         <p class="card-text">Mein Schwerpunkt im 4. Semester behandelt
                                             Authentifizierung. <br> Genauer geht es um Single Sign On (SSO) durch
-                                            Social-Logins wie "Login with Apple" und die Verwendung von Passkeys als
-                                            alternative zu Passwörtern oder als zusätzlicher Faktor.</p>
+                                            Social-Logins wie "Mit Apple  Anmelden" und die Verwendung von Passkeys als
+                                            Alternative zu Passwörtern oder als zusätzlichen Faktor.</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="btn-group">
                                                 <button type="button" class="btn btn-sm btn-outline-secondary"
@@ -1077,6 +1079,132 @@
                                     </div>
                                     <div class="modal-body">
                                         <h2>Authentifizierung durch Passkeys und Social Login</h2>
+                                        <p>Die Authentifizierung im Internet hat sich im Laufe der Jahre stark
+                                            weiterentwickelt. Traditionelle Methoden wie Benutzername und Passwort
+                                            werden zunehmend durch sicherere und benutzerfreundlichere Alternativen
+                                            ersetzt. Zwei dieser modernen Methoden sind Passkeys und Social-Logins,
+                                            wie "Mit Apple Anmelden." In diesem Bericht werden beide Ansätze
+                                            ausführlich beschrieben und ihre Vor- und Nachteile erläutert.</p>
+
+                                        <h3>Passkeys</h3>
+                                        <p>Passkeys sind kryptographisch sichere Schlüssel, die die Notwendigkeit
+                                            von Passwörtern überflüssig machen. Anstatt ein Passwort einzugeben,
+                                            authentifiziert sich der Benutzer mithilfe eines kryptographischen
+                                            Schlüssels, der auf seinem Gerät gespeichert ist.</p>
+
+                                        <h4>Funktionsweise von Passkeys</h4>
+                                        <p>Passkeys verwenden ein asymmetrisches Kryptographie-Verfahren, das aus
+                                            einem öffentlichen und einem privaten Schlüssel besteht. Der öffentliche
+                                            Schlüssel wird auf dem Server gespeichert, während der private Schlüssel
+                                            sicher auf dem Gerät des Benutzers bleibt.</p>
+                                        <ul>
+                                            <li><strong>Erstellung des Passkeys:</strong> Bei der Registrierung
+                                                erstellt das Gerät des Benutzers ein Schlüsselpaar. Der öffentliche
+                                                Schlüssel wird an den Server gesendet, während der private Schlüssel
+                                                sicher auf dem Gerät gespeichert bleibt.</li>
+                                            <li><strong>Authentifizierung:</strong> Bei der Anmeldung sendet der
+                                                Server eine Herausforderung (Challenge) an das Gerät des Benutzers.
+                                                Das Gerät signiert diese Herausforderung mit dem privaten Schlüssel
+                                                und sendet die Signatur zurück an den Server. Der Server überprüft
+                                                die Signatur mit dem öffentlichen Schlüssel. Wenn die Signatur
+                                                gültig ist, wird der Benutzer authentifiziert.</li>
+                                        </ul>
+
+                                        <h4>Vorteile von Passkeys</h4>
+                                        <ul>
+                                            <li><strong>Sicherheit:</strong> Da der private Schlüssel nie das Gerät
+                                                verlässt und Passkeys gegen Phishing-Angriffe immun sind, bieten sie
+                                                ein hohes Maß an Sicherheit.</li>
+                                            <li><strong>Benutzerfreundlichkeit:</strong> Benutzer müssen sich keine
+                                                komplexen Passwörter merken oder regelmäßig ändern. Die
+                                                Authentifizierung erfolgt schnell und einfach.</li>
+                                            <li><strong>Reduzierung der Angriffsfläche:</strong> Passkeys
+                                                eliminieren das Risiko von Datenlecks, die durch gestohlene oder
+                                                schwache Passwörter verursacht werden.</li>
+                                        </ul>
+
+                                        <h4>Nachteile von Passkeys</h4>
+                                        <ul>
+                                            <li><strong>Abhängigkeit von Geräten:</strong> Wenn der Benutzer sein
+                                                Gerät verliert oder wechselt, muss der Passkey neu eingerichtet
+                                                werden.</li>
+                                            <li><strong>Kompatibilität:</strong> Nicht alle Webseiten und
+                                                Anwendungen unterstützen derzeit Passkeys.</li>
+                                        </ul>
+
+                                        <h3>Social-Logins</h3>
+                                        <p>Social-Logins, wie "Mit Apple Anmelden," ermöglichen es Benutzern, sich
+                                            auf Webseiten und in Anwendungen mit ihren bestehenden
+                                            Social-Media-Konten oder anderen Identitätsanbietern zu
+                                            authentifizieren.</p>
+
+                                        <h4>Funktionsweise von Social-Logins</h4>
+                                        <p>Social-Logins verwenden das OAuth-Protokoll, um eine sichere
+                                            Authentifizierung und Autorisierung zu ermöglichen.</p>
+                                        <ul>
+                                            <li><strong>Einleitung:</strong> Der Benutzer wählt die Option, sich mit
+                                                einem Social-Login anzumelden, und wird zur Anmeldeseite des
+                                                Identitätsanbieters weitergeleitet.</li>
+                                            <li><strong>Autorisierung:</strong> Der Benutzer meldet sich beim
+                                                Identitätsanbieter an und autorisiert die Anwendung, auf bestimmte
+                                                Informationen zuzugreifen.</li>
+                                            <li><strong>Token-Austausch:</strong> Der Identitätsanbieter sendet ein
+                                                Autorisierungs-Token an die Anwendung, das verwendet wird, um den
+                                                Benutzer zu authentifizieren.</li>
+                                        </ul>
+
+                                        <h4>Vorteile von Social-Logins</h4>
+                                        <ul>
+                                            <li><strong>Benutzerfreundlichkeit:</strong> Benutzer können sich
+                                                schnell und einfach mit ihren bestehenden Konten anmelden, ohne neue
+                                                Anmeldedaten erstellen zu müssen.</li>
+                                            <li><strong>Bequemlichkeit:</strong> Da die Benutzer bereits mit ihrem
+                                                Social-Media-Konto angemeldet sind, ist der Anmeldeprozess
+                                                schneller.</li>
+                                            <li><strong>Sicherheit:</strong> Identitätsanbieter wie Apple, Google
+                                                oder Facebook haben starke Sicherheitsmaßnahmen und
+                                                Authentifizierungsmethoden implementiert.</li>
+                                        </ul>
+
+                                        <h4>Nachteile von Social-Logins</h4>
+                                        <ul>
+                                            <li><strong>Datenschutz:</strong> Benutzer müssen dem Identitätsanbieter
+                                                vertrauen, dass ihre Daten sicher und privat behandelt werden.</li>
+                                            <li><strong>Abhängigkeit:</strong> Die Anwendung ist auf die
+                                                Verfügbarkeit und Zuverlässigkeit des Identitätsanbieters
+                                                angewiesen.</li>
+                                            <li><strong>Plattformbindung:</strong> Benutzer, die keinen Account beim
+                                                jeweiligen Identitätsanbieter haben, müssen einen neuen Account
+                                                erstellen oder eine andere Authentifizierungsmethode verwenden.</li>
+                                        </ul>
+
+                                        <h3>Vergleich von Passkeys und Social-Logins</h3>
+                                        <p>Beide Authentifizierungsmethoden haben ihre Vor- und Nachteile und eignen
+                                            sich für unterschiedliche Anwendungsfälle.</p>
+                                        <ul>
+                                            <li><strong>Sicherheit:</strong> Passkeys bieten ein höheres Maß an
+                                                Sicherheit, da sie gegen Phishing und Passwortdiebstahl immun sind.
+                                                Social-Logins bieten ebenfalls gute Sicherheit, sind jedoch abhängig
+                                                von der Sicherheit des Identitätsanbieters.</li>
+                                            <li><strong>Benutzerfreundlichkeit:</strong> Social-Logins sind sehr
+                                                benutzerfreundlich und ermöglichen eine schnelle Anmeldung mit
+                                                bestehenden Konten. Passkeys sind ebenfalls benutzerfreundlich,
+                                                erfordern jedoch die Einrichtung auf jedem Gerät.</li>
+                                            <li><strong>Verfügbarkeit:</strong> Social-Logins sind weit verbreitet
+                                                und werden von vielen Webseiten und Anwendungen unterstützt.
+                                                Passkeys sind noch nicht so weit verbreitet, gewinnen jedoch an
+                                                Popularität.</li>
+                                        </ul>
+
+                                        <h3>Zusammenfassung</h3>
+                                        <p>Die Authentifizierung im Internet entwickelt sich ständig weiter, um den
+                                            Bedürfnissen nach Sicherheit und Benutzerfreundlichkeit gerecht zu
+                                            werden. Passkeys und Social-Logins sind zwei moderne Methoden, die diese
+                                            Anforderungen erfüllen. Während Passkeys ein hohes Maß an Sicherheit und
+                                            Schutz gegen Phishing bieten, sind Social-Logins äußerst
+                                            benutzerfreundlich und bequem. Die Wahl der richtigen
+                                            Authentifizierungsmethode hängt von den spezifischen Anforderungen der
+                                            Anwendung und den Präferenzen der Benutzer ab.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1111,10 +1239,76 @@
                                     </div>
                                     <div class="modal-body">
                                         <div>
-                                            <h3>Netzwerkkommunikation und serverseitige Technologien</h3>
+                                            <h3>Einführung</h3>
 
-                                            <h3>Streams, Serialisierung und Datei E/A</h3>
-                                            Text
+                                            <p>In den ersten Vorlesungen haben wir uns intensiv mit der Entwicklung
+                                                verteilter Systeme auseinandergesetzt. Unsere Arbeit hat sich auf zwei
+                                                Hauptthemenbereiche konzentriert: Netzwerkkommunikation und
+                                                serverseitige
+                                                Technologien sowie Streams, Serialisierung und Datei-E/A.</p>
+
+                                            <h4> Vorlesung 1-1: Netzwerkkommunikation und serverseitige Technologien
+                                            </h4>
+
+                                            <p>Im ersten Teil der Vorlesung haben wir die Grundlagen der
+                                                Netzwerkkommunikation behandelt und uns mit verschiedenen serverseitigen
+                                                Technologien auseinandergesetzt. Wir haben die Dynamik im Web und die
+                                                Bedeutung serverseitiger Technologien wie Java, PHP und
+                                                JavaScript/TypeScript besprochen. Ein zentraler Punkt war das
+                                                Verständnis
+                                                der Kommunikation und Verteilung von Programmen zwischen zwei Rechnern.
+                                                Hierbei ist der Client in der Regel der schwächere Rechner, während der
+                                                Server leistungsstärker ist.<br>
+                                                <br>
+                                                <img src="img/v4-1-1.png" class="rounded mx-auto d-block" width=40%>
+                                                <br>
+                                                <br>
+                                                Wir haben uns mit der Geschichte und Entwicklung des Ethernets
+                                                beschäftigt,
+                                                von den Anfängen mit Koaxialkabeln bis hin zu modernen Switches, die
+                                                Kollisionen durch Mikrosegmentierung vermeiden. Ein wichtiger Aspekt war
+                                                die
+                                                Funktionsweise von Switches und deren Vorteil gegenüber traditionellen
+                                                Bridges in Bezug auf die Netzwerksicherheit und Effizienz.<br>
+                                                <br>
+                                                Ein weiterer Schwerpunkt lag auf der Software-Architektur dynamischer
+                                                Webseiten. Wir haben sowohl clientseitige Technologien wie JavaScript
+                                                und
+                                                native Apps als auch serverseitige Technologien wie PHP und Java
+                                                Servlets
+                                                untersucht. Besonders hervorzuheben ist die Bedeutung von Node.js für
+                                                die
+                                                serverseitige JavaScript-Programmierung und die Entwicklung von
+                                                Progressive
+                                                Web-Apps.
+                                            </p>
+                                            <br>
+                                            <br>
+                                            <h4> Vorlesung 1-2: Streams, Serialisierung und Datei E/A</h4>
+
+                                            <p>Im zweiten Teil der Vorlesung haben wir uns mit der Handhabung von
+                                                Datenströmen und
+                                                der Serialisierung von Objekten beschäftigt. Ein grundlegender Teil war
+                                                das
+                                                Verständnis von Objektzuständen und deren Serialisierung, um Daten über
+                                                verschiedene Medien zu übertragen oder zu speichern.<br>
+                                                <br>
+                                                Wir haben praktisch gelernt, wie man Objekte serialisiert und
+                                                deserialisiert sowie Input- und Outputströme in Java verwendet. Dazu
+                                                gehörten Übungen, in denen wir Spielfiguren und Teams in einem Spiel
+                                                programmierten und deren Zustände speicherten und wieder luden. Diese
+                                                Aufgaben halfen uns, die Konzepte der Serialisierung und
+                                                Deserialisierung in realen Szenarien anzuwenden.<br>
+                                                <br>
+                                                <img src="img/v4-1-1.jpg" class="rounded mx-auto d-block" width=50%>
+                                                <br>
+                                                <br>
+                                                Ein weiterer praktischer Teil war das Arbeiten mit Textdateien. Wir
+                                                haben
+                                                ein Java-Programm geschrieben, das Textdateien liest und kopiert, was
+                                                unser
+                                                Verständnis von Datei-E/A und der Manipulation von Textdaten vertiefte.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -1149,7 +1343,65 @@
                                     <div class="modal-body">
                                         <div>
                                             <h3>Netzwerkprogrammierung und Threads Teil 1</h3>
-                                            Text
+                                            In dieser Vorlesung haben wir uns mit den Grundlagen der
+                                            Netzwerkprogrammierung über Sockets und dem Umgang mit Threads in Java
+                                            beschäftigt. Wir haben verstanden, wie man TCP/IP Sockets verwendet, um
+                                            Client-Server-Verbindungen zu etablieren, und wie Threads zur gleichzeitigen
+                                            Ausführung von Aufgaben genutzt werden können.<br>
+                                            <br>
+                                            <h4>Netzwerkprogrammierung über Sockets</h4>
+
+                                            Zunächst haben wir uns mit den Grundlagen der Netzwerkkommunikation mittels
+                                            Sockets vertraut gemacht. Wir haben gelernt, dass Java die Kommunikation
+                                            sowohl über TCP- als auch über UDP-Sockets unterstützt, wobei wir uns in
+                                            dieser Vorlesung auf TCP-Sockets konzentriert haben.<br>
+                                            <br>
+                                            <img src="img/v4-2-1.png" class="rounded mx-auto d-block" width=40%>
+                                            <br>
+                                            <br>
+                                            <h5>TCP/IP Sockets:</h5>
+                                            <ul>
+                                                <li>Client Sockets vs. Server Sockets: <br>
+                                                    Wir haben die Unterschiede zwischen
+                                                    Client- und Server-Sockets kennengelernt. Ein Client-Socket
+                                                    initiiert eine
+                                                    Verbindung zu einem Server-Socket, der auf eingehende Verbindungen
+                                                    wartet.
+                                                </li>
+                                                <br>
+                                                <li>
+                                                    Verbindungsaufbau: <br>
+                                                    Der Verbindungsaufbau erfolgt über definierte
+                                                    Ports. Die "Well Known Ports" reichen von 0 bis 1023, während die
+                                                    "Registered Ports" von 1024 bis 49151 reichen.
+                                                </li>
+                                            </ul>
+                                            <br>
+
+                                            <h4>Threads in Java</h4>
+                                            Ein weiterer zentraler Punkt dieser Vorlesung war die Verwendung von Threads
+                                            in Java, um die Parallelität in Anwendungen zu ermöglichen. Threads erlauben
+                                            es, mehrere Aufgaben gleichzeitig auszuführen, was besonders in verteilten
+                                            Systemen und bei Netzwerkkommunikation von Vorteil ist.<br>
+                                            <br>
+
+                                            <h5>Thread-Lebenszyklus:</h5>
+                                            <ul>
+                                                <li>
+                                                    Wir haben den Lebenszyklus eines Threads besprochen, der
+                                                    verschiedene
+                                                    Zustände wie "neu", "laufend", "wartend" und "beendet" umfasst.
+                                                </li>
+                                                <li>
+                                                    Thread-Management: Java bietet verschiedene Klassen und Methoden, um
+                                                    Threads zu erstellen, zu starten und zu steuern. Dies umfasst das
+                                                    Erstellen
+                                                    von Threads durch Implementierung des `Runnable`-Interfaces oder
+                                                    durch Erben
+                                                    von der `Thread`-Klasse.
+                                                </li>
+                                            </ul>
+                                            <img src="img/v4-2-2.png" class="rounded mx-auto d-block" width=50%>
                                         </div>
                                     </div>
                                 </div>
@@ -1184,7 +1436,90 @@
                                     <div class="modal-body">
                                         <div>
                                             <h3>Netzwerkprogrammierung und Threads Teil 2</h3>
-                                            Text
+                                            <p>In dieser Vorlesung haben wir die Konzepte der Netzwerkprogrammierung und
+                                                der Arbeit mit Threads weiter vertieft. Ein besonderer Fokus lag auf
+                                                Nebenläufigkeitsproblemen, der Synchronisation von Threads und der
+                                                Kommunikation zwischen Threads.</p>
+
+                                            <h4>Nebenläufigkeitsprobleme</h4>
+                                            <p>Wir haben gelernt, dass Nebenläufigkeitsprobleme auftreten, wenn mehrere
+                                                Threads gleichzeitig auf gemeinsame Ressourcen zugreifen. Dies kann zu
+                                                Inkonsistenzen und unerwartetem Verhalten führen, wenn die Threads ihre
+                                                Operationen nicht koordinieren.</p>
+                                            <ul>
+                                                <li><strong>Race Conditions:</strong> Diese treten auf, wenn zwei oder
+                                                    mehr Threads gleichzeitig auf gemeinsame Ressourcen zugreifen und
+                                                    ihre Operationen voneinander abhängig sind.</li>
+                                                <li><strong>Deadlocks:</strong> Diese entstehen, wenn zwei oder mehr
+                                                    Threads sich gegenseitig blockieren, indem sie auf Ressourcen
+                                                    warten, die von den anderen Threads gehalten werden.</li>
+                                            </ul>
+
+                                            <h4>Synchronisation</h4>
+                                            <p>Um Nebenläufigkeitsprobleme zu vermeiden, haben wir die Techniken der
+                                                Synchronisation in Java untersucht. Synchronisation stellt sicher, dass
+                                                nur ein Thread zu einem bestimmten Zeitpunkt auf eine kritische Sektion
+                                                des Codes zugreifen kann.</p>
+                                            <ul>
+                                                <li><strong>Synchronized Blöcke:</strong> Wir verwenden synchronisierte
+                                                    Blöcke, um sicherzustellen, dass nur ein Thread zur gleichen Zeit
+                                                    einen bestimmten Abschnitt des Codes ausführen kann.</li>
+                                                <li><strong>Locks:</strong> Neben synchronisierten Blöcken haben wir
+                                                    auch die Verwendung von expliziten Locks besprochen, die mehr
+                                                    Flexibilität und Kontrolle über die Synchronisation bieten.</li>
+                                            </ul>
+
+                                            <h4>Thread-Kommunikation</h4>
+                                            <p>Ein weiterer wichtiger Aspekt war die Kommunikation zwischen Threads. Wir
+                                                haben Mechanismen untersucht, die es Threads ermöglichen, sicher und
+                                                effizient miteinander zu kommunizieren.</p>
+                                            <ul>
+                                                <li><strong>wait() und notify():</strong> Diese Methoden werden
+                                                    verwendet, um die Koordination zwischen Threads zu ermöglichen. Ein
+                                                    Thread kann warten, bis eine bestimmte Bedingung erfüllt ist
+                                                    (<code>wait()</code>), und ein anderer Thread kann diesen Zustand
+                                                    signalisieren (<code>notify()</code> oder <code>notifyAll()</code>).
+                                                </li>
+                                                <li><strong>Blocking Queues:</strong> Wir haben auch die Verwendung von
+                                                    Blocking Queues besprochen, die eine thread-sichere Art der
+                                                    Kommunikation und Datenweitergabe zwischen Threads bieten.</li>
+                                            </ul>
+
+                                            <h4>Übungsaufgaben</h4>
+                                            <p>Um das Gelernte praktisch anzuwenden, haben wir mehrere Übungen
+                                                durchgeführt, die uns geholfen haben, die theoretischen Konzepte in die
+                                                Praxis umzusetzen.</p>
+
+                                            <h5>Übung 1: Vermeidung von Race Conditions</h5>
+                                            <ul>
+                                                <li><strong>Ziel:</strong> Implementierung eines Programms, das Race
+                                                    Conditions vermeidet.</li>
+                                                <li><strong>Schritte:</strong> Schreiben eines Programms, das mehrere
+                                                    Threads verwendet, um auf gemeinsame Ressourcen zuzugreifen.
+                                                    Verwenden von synchronisierten Blöcken, um sicherzustellen, dass nur
+                                                    ein Thread zur gleichen Zeit auf die Ressource zugreift.</li>
+                                            </ul>
+
+                                            <h5>Übung 2: Deadlock-Vermeidung</h5>
+                                            <ul>
+                                                <li><strong>Ziel:</strong> Implementierung eines Programms, das
+                                                    Deadlocks vermeidet.</li>
+                                                <li><strong>Schritte:</strong> Schreiben eines Programms, das mehrere
+                                                    Threads verwendet, um auf mehrere Ressourcen zuzugreifen. Anwenden
+                                                    von Techniken zur Deadlock-Vermeidung, wie z.B. die Reihenfolge des
+                                                    Ressourcenzugriffs strikt festzulegen.</li>
+                                            </ul>
+
+                                            <h5>Übung 3: Thread-Kommunikation mit wait() und notify()</h5>
+                                            <ul>
+                                                <li><strong>Ziel:</strong> Implementierung eines Programms, das die
+                                                    Kommunikation zwischen Threads mit <code>wait()</code> und
+                                                    <code>notify()</code> demonstriert.
+                                                </li>
+                                                <li><strong>Schritte:</strong> Schreiben eines Programms, bei dem ein
+                                                    Thread auf eine Bedingung wartet und ein anderer Thread diese
+                                                    Bedingung signalisiert.</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -1218,10 +1553,156 @@
                                     </div>
                                     <div class="modal-body">
                                         <div>
-                                            <h3>PHP</h3>
-                                            Text
-                                            <h3>MySQL</h3>
-                                            Text
+                                            <h3>Vorlesung 4: PHP</h3>
+                                            <p>In der Vorlesung haben wir die Grundlagen von PHP, der am häufigsten
+                                                auf Webseiten verwendeten serverseitigen Programmiersprache,
+                                                behandelt. Wir haben uns mit der Einrichtung und Nutzung von
+                                                Entwicklungsumgebungen und Editoren vertraut gemacht und eine
+                                                Einführung in die Entwicklung von PHP-Projekten gegeben.</p>
+
+                                            <h4>PHP-Grundlagen</h4>
+                                            <ul>
+                                                <li><strong>Editoren und Entwicklungsumgebungen:</strong> Für die
+                                                    Entwicklung in PHP haben wir verschiedene Editoren wie
+                                                    Notepad++, Atom und Sublime Text sowie Entwicklungsumgebungen
+                                                    wie Eclipse und Visual Studio Code besprochen.</li>
+                                                <li><strong>Erste Schritte:</strong> Wir haben gelernt, wie man ein
+                                                    einfaches PHP-Skript erstellt und es auf einem lokalen Webserver
+                                                    ausführt. Dazu haben wir XAMPP installiert und konfiguriert, um
+                                                    einen lokalen Apache-Webserver und eine MySQL-Datenbank
+                                                    bereitzustellen.</li>
+                                            </ul>
+
+                                            <h4>Praktische Übungen</h4>
+
+                                            <h5>Übung 1: Einfache PHP-Seite</h5>
+                                            <ul>
+                                                <li><strong>Ziel:</strong> Erstellung einer einfachen PHP-Seite, die
+                                                    eine persönliche Begrüßung anzeigt.</li>
+                                                <li><strong>Schritte:</strong>
+                                                    <ul>
+                                                        <li>Laden der <code>initial.zip</code> Datei herunter,
+                                                            entpacken und die Dateien in den XAMPP
+                                                            <code>htdocs</code> Ordner kopieren.
+                                                        </li>
+                                                        <li>Modifizieren der <code>meldung.php</code> Datei, um eine
+                                                            persönliche Begrüßung basierend auf einer Variable
+                                                            <code>$Name</code> anzuzeigen.
+                                                        </li>
+                                                        <li>Starten des Apache-Servers und Aufrufen der Seite im
+                                                            Browser unter <code>localhost/meldung.html</code>.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+
+                                            <h5>Übung 2: E-Mail-Versand mit PHP</h5>
+                                            <ul>
+                                                <li><strong>Ziel:</strong> Implementierung eines einfachen
+                                                    E-Mail-Versands mit PHP.</li>
+                                                <li><strong>Schritte:</strong>
+                                                    <ul>
+                                                        <li>Erstellen eines PHP-Skripts, das eine E-Mail sendet.
+                                                        </li>
+                                                        <li>Testen des Skripts auf dem lokalen Server und
+                                                            Überprüfung der gesendeten E-Mails.</li>
+                                                        <li>Überlegen, warum man keinen E-Mail-Server auf dem
+                                                            eigenen Notebook betreiben sollte.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+
+                                            <h3>Vorlesung 4: PHP & MySQL</h3>
+                                            <p>In dieser Vorlesung haben wir das PHP-Projekt weitergeführt und eine
+                                                Einführung in SQL und die Nutzung von SQL mit PHP gegeben.</p>
+
+                                            <h4>Fortführung des PHP-Projekts</h4>
+                                            <p>Wir haben unser PHP-Projekt erweitert und uns auf die Integration
+                                                einer MySQL-Datenbank konzentriert. Dazu haben wir XAMPP verwendet,
+                                                um einen lokalen MySQL-Server zu betreiben.</p>
+
+                                            <h4>Einführung in SQL</h4>
+                                            <ul>
+                                                <li><strong>Grundlagen von SQL:</strong> Wir haben die grundlegenden
+                                                    SQL-Befehle wie <code>SELECT</code>, <code>INSERT</code>,
+                                                    <code>UPDATE</code> und <code>DELETE</code> besprochen und
+                                                    gelernt, wie man diese in PHP verwendet, um mit der
+                                                    MySQL-Datenbank zu interagieren.
+                                                </li>
+                                                <li><strong>Nutzung von SQL mit PHP:</strong> Wir haben gezeigt, wie
+                                                    man mit PHP eine Verbindung zur MySQL-Datenbank herstellt und
+                                                    SQL-Abfragen ausführt.</li>
+                                            </ul>
+
+                                            <h4>Praktische Übungen</h4>
+
+                                            <h5>Übung 1: Datenbankverbindung</h3>
+                                                <ul>
+                                                    <li><strong>Ziel:</strong> Herstellung einer Verbindung zu einer
+                                                        MySQL-Datenbank mit PHP.</li>
+                                                    <li><strong>Schritte:</strong>
+                                                        <ul>
+                                                            <li>Erstellen eines PHP-Skripts, das eine Verbindung zur
+                                                                MySQL-Datenbank herstellt.</li>
+                                                            <li>Ausführen einfacher SQL-Abfragen und Anzeigen der
+                                                                Ergebnisse auf einer Webseite.</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                                <h5>Übung 2: Datenmanipulation</h5>
+                                                <ul>
+                                                    <li><strong>Ziel:</strong> Durchführung von Datenmanipulationen in
+                                                        der MySQL-Datenbank mit PHP.</li>
+                                                    <li><strong>Schritte:</strong>
+                                                        <ul>
+                                                            <li>Erstellen eines PHP-Skripts, das Daten in die
+                                                                MySQL-Datenbank einfügt, aktualisiert und löscht.</li>
+                                                            <li>Testen des Skripts und Überprüfung der Datenänderungen
+                                                                in der Datenbank.</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                                <h3>Installation von XAMPP</h3>
+                                                <p>In dieser Anleitung haben wir die Schritte zur Installation und
+                                                    Konfiguration von XAMPP beschrieben, um einen lokalen Webserver und
+                                                    eine SQL-Datenbank auf Ihrem Notebook oder PC einzurichten.</p>
+
+                                                <h4>Schritt-für-Schritt-Anleitung</h4>
+                                                <ol>
+                                                    <li><strong>Download:</strong> Herunterladen der Version 7.4.33 von
+                                                        der Website apachefriends.org.</li>
+                                                    <li><strong>Installation:</strong> Ausführen des
+                                                        Installationsprogramms und langsames, sorgfältiges Durchgehen
+                                                        des Installationsprozesses.</li>
+                                                    <li><strong>Nach der Installation:</strong>
+                                                        <ul>
+                                                            <li>Suchen des XAMPP-Ordners und Ausführen des
+                                                                Kontrollprogramms (Windows:
+                                                                <code>xampp-control.exe</code>, OS X:
+                                                                <code>manager-osx.app</code>).
+                                                            </li>
+                                                            <li>Starten des Apache- und MySQL-Servers über das
+                                                                Control-Panel.</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><strong>Erste Schritte:</strong>
+                                                        <ul>
+                                                            <li>Starten eines Browsers und Eingeben von
+                                                                <code>localhost</code>, um die Willkommensseite des
+                                                                Servers anzuzeigen.
+                                                            </li>
+                                                            <li>Eingeben von <code>localhost/phpmyadmin</code>, um die
+                                                                Verwaltungsoberfläche der MySQL-Datenbank zu öffnen.
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+
+                                                <h4>Wichtige Hinweise</h4>
+                                                <p>Nach Beendigung der Arbeit nicht vergessen, die Server im
+                                                    Control-Panel zu stoppen, um Ressourcen zu schonen und
+                                                    Sicherheitsrisiken zu vermeiden.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1255,8 +1736,97 @@
                                     </div>
                                     <div class="modal-body">
                                         <div>
-                                            <h3>PHP: personalisierte Webanwendungen: Teil 1</h3>
-                                            Text
+                                            <h3>Vorlesung 5/6: PHP: personalisierte Webanwendungen</h3>
+                                            <p>In dieser Vorlesung haben wir uns auf die Entwicklung
+                                                personalisierter Webanwendungen mit PHP konzentriert. Der Fokus lag
+                                                auf Login- und Anmeldesystemen sowie der Identifikation von
+                                                Sitzungen über Cookies und Sessions.</p>
+
+                                            <h4>Inhalt heute</h4>
+                                            <ul>
+                                                <li>Login & Anmeldung</li>
+                                                <li>Identifikation von Sitzungen über Cookies</li>
+                                                <li>Identifikation von Sitzungen über Sessions</li>
+                                            </ul>
+
+                                            <h4>Praktische Übungen</h4>
+
+                                            <h5>Übung 1: Login- und Anmeldesystem</h5>
+                                            <ul>
+                                                <li><strong>Ziel:</strong> Implementierung eines einfachen Login-
+                                                    und Anmeldesystems.</li>
+                                                <li><strong>Schritte:</strong>
+                                                    <ul>
+                                                        <li>Download der <code>hl_initial.zip</code> Datei und
+                                                            Entpacken in den Übungsordner.</li>
+                                                        <li>Modifizieren der Dateien, um Benutzerregistrierung und
+                                                            -authentifizierung zu ermöglichen.</li>
+                                                        <li>Starten des Apache-Servers und Testen der Anmeldung und
+                                                            des Logins im Browser.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+
+                                            <h5>Übung 2: Sitzungsverwaltung mit Cookies</h5>
+                                            <ul>
+                                                <li><strong>Ziel:</strong> Verwendung von Cookies zur Identifikation
+                                                    von Benutzersitzungen.</li>
+                                                <li><strong>Schritte:</strong>
+                                                    <ul>
+                                                        <li>Erstellen eines PHP-Skripts, das einen Cookie setzt,
+                                                            wenn sich ein Benutzer anmeldet.</li>
+                                                        <li>Überprüfen des Cookies bei nachfolgenden Anfragen, um
+                                                            die Benutzersitzung zu identifizieren.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+
+                                            <h5>Übung 3: Sitzungsverwaltung mit Sessions</h5>
+                                            <ul>
+                                                <li><strong>Ziel:</strong> Verwendung von Sessions zur
+                                                    Identifikation und Verwaltung von Benutzersitzungen.</li>
+                                                <li><strong>Schritte:</strong>
+                                                    <ul>
+                                                        <li>Erstellen eines PHP-Skripts, das eine Session startet,
+                                                            wenn sich ein Benutzer anmeldet.</li>
+                                                        <li>Speichern von Benutzerinformationen in der Session und
+                                                            Überprüfen dieser Informationen bei nachfolgenden
+                                                            Anfragen.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+
+                                            <h4>Sicherheit bei Passwörtern</h4>
+                                            <p>Bei der Speicherung von Passwörtern haben wir die Bedeutung von
+                                                Hashing und "Salted Hashing" besprochen, um die Sicherheit der
+                                                Benutzerdaten zu gewährleisten.</p>
+                                            <ul>
+                                                <li><strong>Hashing:</strong> Verwendung von Algorithmen wie md5,
+                                                    SHA1 und SHA2 zur Erstellung von Hash-Werten. Wir haben
+                                                    besprochen, dass md5 und SHA1 nicht mehr als vollständig sicher
+                                                    gelten und die Verwendung von SHA2 empfohlen wird.</li>
+                                                <li><strong>Salted Hashing:</strong> Hinzufügen einer zufälligen
+                                                    Zeichenkette (Salt) zum Passwort, bevor der Hash-Wert erstellt
+                                                    wird, um die Sicherheit zu erhöhen und Rainbow-Table-Angriffe zu
+                                                    verhindern.</li>
+                                            </ul>
+
+                                            <h4>Praktische Sicherheitsübung</h4>
+                                            <ul>
+                                                <li><strong>Ziel:</strong> Implementierung von "Salted Hashing" für
+                                                    die Passwortspeicherung.</li>
+                                                <li><strong>Schritte:</strong>
+                                                    <ul>
+                                                        <li>Erstellen eines PHP-Skripts, das ein Passwort mit einem
+                                                            Salt versieht und den Hash-Wert berechnet.</li>
+                                                        <li>Speichern des Hash-Werts und des Salts in der Datenbank.
+                                                        </li>
+                                                        <li>Überprüfen des Passworts durch erneutes Hashen der
+                                                            Benutzereingabe mit dem gespeicherten Salt und Vergleich
+                                                            der Hash-Werte.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -1267,12 +1837,12 @@
                         <div class="card shadow-sm">
                             <img class="card-img-top bg-secondary" src="img/quellcode.jpg">
                             <div class="card-body">
-                                <h3 class="card-title">Quellcode Herunterladen</h3>
-                                <p class="card-text">Hier können Sie den Quellcode der Website herunterladen</p>
+                                <h3 class="card-title">Quellcode</h3>
+                                <p class="card-text">Hier können Sie den Quellcode der Website herunterladen.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary"
-                                            onclick="window.location='https:/\/\download.paul-charwat.de/share/E9tF_vP5';">Anzeigen
+                                            onclick="window.location='https:/\/\download.paul-charwat.de/share/E9tF_vP5';">Herunterladen
                                         </button>
                                     </div>
                                     <small class="text-body-secondary">03.06.2024</small>
