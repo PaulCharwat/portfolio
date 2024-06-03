@@ -1109,7 +1109,7 @@
                                                 die Signatur mit dem öffentlichen Schlüssel. Wenn die Signatur
                                                 gültig ist, wird der Benutzer authentifiziert.</li>
                                         </ul>
-
+                                        <img src="img/v4-s-1.png" class="rounded mx-auto d-block" width=55%>
                                         <h4>Vorteile von Passkeys</h4>
                                         <ul>
                                             <li><strong>Sicherheit:</strong> Da der private Schlüssel nie das Gerät
@@ -1152,7 +1152,7 @@
                                                 Autorisierungs-Token an die Anwendung, das verwendet wird, um den
                                                 Benutzer zu authentifizieren.</li>
                                         </ul>
-
+                                        <img src="img/v4-s-2.png" class="rounded mx-auto d-block" width=30%>
                                         <h4>Vorteile von Social-Logins</h4>
                                         <ul>
                                             <li><strong>Benutzerfreundlichkeit:</strong> Benutzer können sich
@@ -1402,6 +1402,18 @@
                                                 </li>
                                             </ul>
                                             <img src="img/v4-2-2.png" class="rounded mx-auto d-block" width=50%>
+
+                                            <h4>Aufgabe</h4>
+                                            <p>Um das Gelernte praktisch anzuwenden, haben wir eine Übungsaufgabe
+                                                durchgeführt, bei der wir ein einfaches Chat-Programm implementiert
+                                                haben. Das Programm ermöglichte es, Nachrichten zwischen einem Client
+                                                und
+                                                einem Server über TCP-Sockets auszutauschen.<br>
+                                                <br>
+                                                Hier finden Sie den Quellcode des Chat Servers. Den Quellcode des Chat
+                                                Clients finden Sie in der nächsten Vorlesung.
+                                            </p>
+                                            <img src="img/v4-2-3.png" class="rounded mx-auto d-block" width=70%>
                                         </div>
                                     </div>
                                 </div>
@@ -1520,6 +1532,8 @@
                                                     Thread auf eine Bedingung wartet und ein anderer Thread diese
                                                     Bedingung signalisiert.</li>
                                             </ul>
+                                            <h4>Aufgabe: Chat-Client</h4>
+                                            <img src="img/v4-3-1.png" class="rounded mx-auto d-block" width=70%>
                                         </div>
                                     </div>
                                 </div>
@@ -1594,7 +1608,7 @@
                                                     </ul>
                                                 </li>
                                             </ul>
-
+                                            <img src="img/v4-4-1.png" class="rounded mx-auto d-block" width=70%>
                                             <h5>Übung 2: E-Mail-Versand mit PHP</h5>
                                             <ul>
                                                 <li><strong>Ziel:</strong> Implementierung eines einfachen
@@ -1686,6 +1700,7 @@
                                                                 Control-Panel.</li>
                                                         </ul>
                                                     </li>
+                                                    <img src="img/v4-4-2.png" class="rounded mx-auto d-block" width=70%>
                                                     <li><strong>Erste Schritte:</strong>
                                                         <ul>
                                                             <li>Starten eines Browsers und Eingeben von
@@ -1737,96 +1752,59 @@
                                     <div class="modal-body">
                                         <div>
                                             <h3>Vorlesung 5/6: PHP: personalisierte Webanwendungen</h3>
-                                            <p>In dieser Vorlesung haben wir uns auf die Entwicklung
-                                                personalisierter Webanwendungen mit PHP konzentriert. Der Fokus lag
-                                                auf Login- und Anmeldesystemen sowie der Identifikation von
-                                                Sitzungen über Cookies und Sessions.</p>
+                                            Die letzten Vorlesung behandelte die Personalisierung und
+                                            Zustandsspeicherung, insbesondere anhand der Webseite
+                                            Hassliebe.net, die auf persönlichen Daten basiert, um Menschen
+                                            zusammenzubringen. Dazu sind Benutzerprofile erforderlich, die in einer
+                                            Tabelle gespeichert werden. Damit ein Nutzer seine Daten bearbeiten kann,
+                                            muss die Anwendung den Nutzer identifizieren können.<br>
+                                            <br>
+                                            <h4>Benutzer-Logins</h4>
 
-                                            <h4>Inhalt heute</h4>
-                                            <ul>
-                                                <li>Login & Anmeldung</li>
-                                                <li>Identifikation von Sitzungen über Cookies</li>
-                                                <li>Identifikation von Sitzungen über Sessions</li>
-                                            </ul>
+                                            Der erste Schritt zur Personalisierung ist die Implementierung von
+                                            Benutzer-Logins, sodass die Anwendung den Zugriff auf benutzerspezifische
+                                            Daten ermöglichen kann. Der Login erfordert einen Benutzernamen
+                                            und ein Passwort, wobei der Benutzername zur eindeutigen Identifizierung und
+                                            das Passwort zur Sicherung der persönlichen Daten dient.<br>
+                                            <br>
 
-                                            <h4>Praktische Übungen</h4>
+                                            <h4>Datenbankvorbereitung</h4>
 
-                                            <h5>Übung 1: Login- und Anmeldesystem</h5>
-                                            <ul>
-                                                <li><strong>Ziel:</strong> Implementierung eines einfachen Login-
-                                                    und Anmeldesystems.</li>
-                                                <li><strong>Schritte:</strong>
-                                                    <ul>
-                                                        <li>Download der <code>hl_initial.zip</code> Datei und
-                                                            Entpacken in den Übungsordner.</li>
-                                                        <li>Modifizieren der Dateien, um Benutzerregistrierung und
-                                                            -authentifizierung zu ermöglichen.</li>
-                                                        <li>Starten des Apache-Servers und Testen der Anmeldung und
-                                                            des Logins im Browser.</li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                            Um die Login-Daten zu speichern, müssen der Tabelle zwei neue Spalten,
+                                            <strong>nutzername</strong> und <strong>passwort</strong>, hinzugefügt
+                                            werden. Die <strong>SHA()</strong>-Funktion wird
+                                            verwendet, um Passwörter zu hashen, um die Passwörter nicht im klartext zu
+                                            speichern. Ein hashing Algorithmus ist nicht umkerbar, somit lassen sich
+                                            ddie Passwörter nicht entschlüsseln. Inzwischen gibt es komplexere
+                                            Algorithmen wie SHA265, SHA512, etc. <br>
+                                            Für zusätzliche Sicherheit, auch gegenüber schwächeren Passwörtern, kann ein
+                                            Salt verwendet werden. Ein Salt ist eine zufällige Zeichenfolge, die dem
+                                            Passwort vor dem Hashen hinzugefügt wird. Dadurch wird das Passwort
+                                            verlängert und erschwert das Knacken durch Brute-Force-Angriffe. <br>
+                                            <br>
 
-                                            <h5>Übung 2: Sitzungsverwaltung mit Cookies</h5>
-                                            <ul>
-                                                <li><strong>Ziel:</strong> Verwendung von Cookies zur Identifikation
-                                                    von Benutzersitzungen.</li>
-                                                <li><strong>Schritte:</strong>
-                                                    <ul>
-                                                        <li>Erstellen eines PHP-Skripts, das einen Cookie setzt,
-                                                            wenn sich ein Benutzer anmeldet.</li>
-                                                        <li>Überprüfen des Cookies bei nachfolgenden Anfragen, um
-                                                            die Benutzersitzung zu identifizieren.</li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                            <h4>HTTP-Authentifizierung und Cookies</h4>
 
-                                            <h5>Übung 3: Sitzungsverwaltung mit Sessions</h5>
-                                            <ul>
-                                                <li><strong>Ziel:</strong> Verwendung von Sessions zur
-                                                    Identifikation und Verwaltung von Benutzersitzungen.</li>
-                                                <li><strong>Schritte:</strong>
-                                                    <ul>
-                                                        <li>Erstellen eines PHP-Skripts, das eine Session startet,
-                                                            wenn sich ein Benutzer anmeldet.</li>
-                                                        <li>Speichern von Benutzerinformationen in der Session und
-                                                            Überprüfen dieser Informationen bei nachfolgenden
-                                                            Anfragen.</li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                            HTTP-Authentifizierung ist eine einfache Methode, Benutzer mithilfe einer
+                                            Eingabe von
+                                            Benutzernamen und Passwört zu identifizieren, bietet jedoch keine logout
+                                            Möglichkeit. Daher ist die Verwendung einer Cookie basierten
+                                            Authentifizierung eine bessere Lösung. Cookies
+                                            ermöglichen es, Daten wie Benutzer-IDs und -namen persistent zu speichern
+                                            und über mehrere Seiten hinweg zu nutzen, was auch das Ausloggen
+                                            erleichtert.
 
-                                            <h4>Sicherheit bei Passwörtern</h4>
-                                            <p>Bei der Speicherung von Passwörtern haben wir die Bedeutung von
-                                                Hashing und "Salted Hashing" besprochen, um die Sicherheit der
-                                                Benutzerdaten zu gewährleisten.</p>
-                                            <ul>
-                                                <li><strong>Hashing:</strong> Verwendung von Algorithmen wie md5,
-                                                    SHA1 und SHA2 zur Erstellung von Hash-Werten. Wir haben
-                                                    besprochen, dass md5 und SHA1 nicht mehr als vollständig sicher
-                                                    gelten und die Verwendung von SHA2 empfohlen wird.</li>
-                                                <li><strong>Salted Hashing:</strong> Hinzufügen einer zufälligen
-                                                    Zeichenkette (Salt) zum Passwort, bevor der Hash-Wert erstellt
-                                                    wird, um die Sicherheit zu erhöhen und Rainbow-Table-Angriffe zu
-                                                    verhindern.</li>
-                                            </ul>
+                                            Ein Anmeldeformular ermöglicht es neuen Benutzern, sich zu registrieren,
+                                            indem sie Benutzernamen und Passwörter eingeben. Das Skript muss
+                                            sicherstellen, dass der Benutzername noch nicht verwendet wird. Ein
+                                            Login-Skript fordert Benutzer zur Eingabe von Benutzernamen und Passwörtern
+                                            auf und vergleicht diese mit den in der Datenbank gespeicherten,
+                                            Passwörtern.
 
-                                            <h4>Praktische Sicherheitsübung</h4>
-                                            <ul>
-                                                <li><strong>Ziel:</strong> Implementierung von "Salted Hashing" für
-                                                    die Passwortspeicherung.</li>
-                                                <li><strong>Schritte:</strong>
-                                                    <ul>
-                                                        <li>Erstellen eines PHP-Skripts, das ein Passwort mit einem
-                                                            Salt versieht und den Hash-Wert berechnet.</li>
-                                                        <li>Speichern des Hash-Werts und des Salts in der Datenbank.
-                                                        </li>
-                                                        <li>Überprüfen des Passworts durch erneutes Hashen der
-                                                            Benutzereingabe mit dem gespeicherten Salt und Vergleich
-                                                            der Hash-Werte.</li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                            Das Hauptmenü der Webseite sollte sich je nach Login-Status dynamisch ändern
+                                            und den Zugriff auf Profile sowie die Möglichkeit zum Ein- und Ausloggen
+                                            bieten. Ein Logout-Skript löscht die gesetzten Cookies, um den Benutzer
+                                            auszuloggen und somit den Zugriff auf persönliche Daten zu beenden.
                                         </div>
                                     </div>
                                 </div>
